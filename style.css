@@ -1,3 +1,12 @@
+:root {
+    /* Palet 6 Warna Pink Kamu */
+    --pink1: #FFCFD8;
+    --pink2: #FFA6CA;
+    --pink3: #FF9CB4;
+    --pink4: #F47EAB;
+    --pink5: #DA4F8E;
+    --pink6: #FF1695;
+}
 
 * {
     margin: 0;
@@ -7,8 +16,9 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #ffebee 0%, #fce4ec 50%, #f8bbd0 100%);
-    color: #d81b60;
+    /* Latar belakang menggunakan gradien gabungan ke-6 warna */
+    background: linear-gradient(135deg, var(--pink1), var(--pink2), var(--pink3), var(--pink4), var(--pink5), var(--pink6));
+    color: var(--pink5);
     overflow-x: hidden;
     min-height: 100vh;
     display: flex;
@@ -29,34 +39,34 @@ body {
     width: 90%;
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(216, 27, 96, 0.3);
+    box-shadow: 0 10px 30px rgba(218, 79, 142, 0.3);
     padding: 30px;
     position: relative;
     z-index: 1;
     overflow: hidden;
     backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 h1, h2 {
-    font-family: 'Dancing Script', cursive;
     text-align: center;
     margin-bottom: 20px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
+    font-family: 'Chewy', cursive;
     font-size: 3.5rem;
-    color: #d81b60;
-    background: linear-gradient(to right, #d81b60, #ff4081);
+    background: linear-gradient(to right, var(--pink5), var(--pink6));
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 h2 {
-    font-size: 2.5rem;
-    color: #f06292;
+    font-family: 'Chewy', cursive;
+    font-size: 3rem;
+    color: var(--pink5);
     margin-bottom: 25px;
 }
 
@@ -87,7 +97,7 @@ p {
 }
 
 .btn {
-    background: linear-gradient(45deg, #d81b60, #ff4081);
+    background: linear-gradient(45deg, var(--pink5), var(--pink6));
     color: white;
     border: none;
     padding: 15px 30px;
@@ -96,7 +106,7 @@ p {
     cursor: pointer;
     margin-top: 25px;
     transition: all 0.3s;
-    box-shadow: 0 4px 15px rgba(216, 27, 96, 0.4);
+    box-shadow: 0 4px 15px rgba(255, 22, 149, 0.4);
     font-weight: 600;
     letter-spacing: 1px;
     position: relative;
@@ -106,7 +116,7 @@ p {
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(216, 27, 96, 0.5);
+    box-shadow: 0 8px 25px rgba(255, 22, 149, 0.5);
 }
 
 .btn:active {
@@ -120,7 +130,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #ff4081, #d81b60);
+    background: linear-gradient(45deg, var(--pink6), var(--pink4));
     z-index: -1;
     opacity: 0;
     transition: opacity 0.3s;
@@ -133,29 +143,29 @@ p {
 .heart {
     width: 120px;
     height: 120px;
-    background-color: #ff4081;
+    background-color: var(--pink6);
     transform: rotate(45deg);
     margin: 40px auto;
     position: relative;
     animation: heartbeat 1.5s infinite;
     cursor: pointer;
-    box-shadow: 0 0 40px rgba(255, 64, 129, 0.6);
+    box-shadow: 0 0 40px rgba(255, 22, 149, 0.6);
     transition: all 0.3s;
 }
 
 .heart:hover {
     transform: rotate(45deg) scale(1.1);
-    box-shadow: 0 0 60px rgba(255, 64, 129, 0.8);
+    box-shadow: 0 0 60px rgba(255, 22, 149, 0.8);
 }
 
 .heart:before, .heart:after {
     content: '';
     width: 120px;
     height: 120px;
-    background-color: #ff4081;
+    background-color: var(--pink6);
     border-radius: 50%;
     position: absolute;
-    box-shadow: 0 0 40px rgba(255, 64, 129, 0.6);
+    box-shadow: 0 0 40px rgba(255, 22, 149, 0.6);
 }
 
 .heart:before {
@@ -179,7 +189,7 @@ p {
 
 .name-input {
     padding: 15px 25px;
-    border: 2px solid #f8bbd0;
+    border: 2px solid var(--pink3);
     border-radius: 50px;
     font-size: 1.1rem;
     width: 80%;
@@ -193,8 +203,8 @@ p {
 }
 
 .name-input:focus {
-    border-color: #d81b60;
-    box-shadow: 0 0 15px rgba(216, 27, 96, 0.3);
+    border-color: var(--pink5);
+    box-shadow: 0 0 15px rgba(218, 79, 142, 0.3);
     transform: scale(1.02);
 }
 
@@ -202,17 +212,17 @@ p {
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    border: 8px solid #f8bbd0;
+    border: 8px solid var(--pink3);
     overflow: hidden;
     margin: 30px auto;
     position: relative;
-    box-shadow: 0 15px 35px rgba(216, 27, 96, 0.25);
+    box-shadow: 0 15px 35px rgba(218, 79, 142, 0.25);
     transition: all 0.5s;
 }
 
 .photo-frame:hover {
     transform: scale(1.05) rotate(5deg);
-    box-shadow: 0 20px 40px rgba(216, 27, 96, 0.35);
+    box-shadow: 0 20px 40px rgba(218, 79, 142, 0.35);
 }
 
 .photo-frame img {
@@ -239,36 +249,21 @@ p {
 .floating-heart {
     position: absolute;
     font-size: 24px;
-    color: #ff4081;
+    color: var(--pink6);
     animation: float-up 4s linear forwards;
     opacity: 0;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 @keyframes float-up {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-100vh) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-.confetti {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background-color: #f44336;
-    opacity: 0;
-    z-index: 20;
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
 }
 
 .progress-bar {
     width: 100%;
     height: 10px;
-    background-color: #f8bbd0;
+    background-color: var(--pink1);
     border-radius: 5px;
     margin: 25px 0;
     overflow: hidden;
@@ -277,19 +272,19 @@ p {
 
 .progress {
     height: 100%;
-    background: linear-gradient(to right, #f06292, #d81b60);
+    background: linear-gradient(to right, var(--pink4), var(--pink6));
     width: 0%;
     transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1);
     border-radius: 5px;
 }
 
 .message-box {
-    background-color: #fce4ec;
+    background-color: var(--pink1);
     border-radius: 20px;
     padding: 25px;
     margin: 25px 0;
     text-align: center;
-    box-shadow: 0 8px 20px rgba(216, 27, 96, 0.15);
+    box-shadow: 0 8px 20px rgba(218, 79, 142, 0.15);
     transform: scale(0.9);
     opacity: 0;
     transition: all 0.8s;
@@ -303,10 +298,9 @@ p {
 }
 
 .typing-effect {
-    border-right: 2px solid #d81b60;
+    border-right: 2px solid var(--pink5);
     animation: blink 0.75s step-end infinite;
     overflow: hidden;
-   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -315,7 +309,7 @@ p {
 
 @keyframes blink {
     from, to { border-color: transparent }
-    50% { border-color: #d81b60 }
+    50% { border-color: var(--pink5) }
 }
 
 .social-share {
@@ -329,7 +323,7 @@ p {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: linear-gradient(45deg, #f8bbd0, #f06292);
+    background: linear-gradient(45deg, var(--pink3), var(--pink5));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -337,15 +331,13 @@ p {
     font-size: 24px;
     cursor: pointer;
     transition: all 0.3s;
-    box-shadow: 0 4px 10px rgba(216, 27, 96, 0.3);
+    box-shadow: 0 4px 10px rgba(218, 79, 142, 0.3);
 }
 
 .social-icon:hover {
     transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 8px 20px rgba(216, 27, 96, 0.4);
+    box-shadow: 0 8px 20px rgba(218, 79, 142, 0.4);
 }
-
-
 
 .polaroid {
     background: white;
@@ -362,38 +354,63 @@ p {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* --- PASTE DARI SINI --- */
+.memory-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; 
+    margin: 20px 0;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.polaroid {
+    background: white;
+    padding: 8px 8px 45px 8px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* PERUBAHAN PENTING: Jangan pakai 'all' agar tidak bentrok dengan animasi Javascript */
+    transition: transform 0.4s, box-shadow 0.4s;
+    width: 100%;
+    position: relative;
+}
+
+/* Membuat efek miring natural secara selang-seling */
+.polaroid:nth-child(odd) { transform: rotate(-3deg); }
+.polaroid:nth-child(even) { transform: rotate(4deg); }
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.08);
+    box-shadow: 0 10px 25px rgba(218, 79, 142, 0.3);
+    z-index: 10;
+}
+
 .polaroid img {
-    width: 140px;
-    height: 150px;
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
     border: 1px solid #eee;
 }
 
 .polaroid-caption {
     text-align: center;
     font-family: 'Dancing Script', cursive;
-    font-size: 1.5rem;
-    color: #d81b60;
-    margin-top: 10px;
+    font-size: 1.2rem;
+    color: var(--pink5);
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
 }
-
-.memory-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin: 30px 0;
-}
+/* --- SAMPAI SINI --- */
 
 .countdown {
     font-size: 2rem;
     font-weight: bold;
-    color: #d81b60;
+    color: var(--pink5);
     text-align: center;
     margin: 20px 0;
     font-family: 'Dancing Script', cursive;
 }
-
-
 
 .petals {
     position: absolute;
@@ -417,13 +434,11 @@ p {
 .signature {
     font-family: 'Dancing Script', cursive;
     font-size: 2rem;
-    color: #d81b60;
+    color: var(--pink6);
     margin-top: 30px;
     text-align: right;
     padding-right: 50px;
 }
-
-
 
 .firework {
     position: absolute;
@@ -437,14 +452,8 @@ p {
 }
 
 @keyframes firework-animation {
-    0% {
-        transform: translate(var(--x), var(--y));
-        opacity: 1;
-    }
-    100% {
-        transform: translate(var(--x-end), var(--y-end));
-        opacity: 0;
-    }
+    0% { transform: translate(var(--x), var(--y)); opacity: 1; }
+    100% { transform: translate(var(--x-end), var(--y-end)); opacity: 0; }
 }
 
 .firework-particle {
@@ -458,51 +467,129 @@ p {
 }
 
 @keyframes firework-particle {
-    0% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(var(--tx), var(--ty));
-        opacity: 0;
-    }
+    0% { transform: translate(0, 0); opacity: 1; }
+    100% { transform: translate(var(--tx), var(--ty)); opacity: 0; }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    h2 {
-        font-size: 2rem;
-    }
-    .container {
-        padding: 20px;
-    }
-    .photo-frame {
-        width: 180px;
-        height: 180px;
-    }
-  
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    .container { padding: 20px; }
+    .photo-frame { width: 180px; height: 180px; }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-    }
-    h2 {
-        font-size: 1.5rem;
-    }
-    p {
-        font-size: 1rem;
-    }
-    .btn {
-        padding: 12px 25px;
-        font-size: 1rem;
-    }
-    .photo-frame {
-        width: 150px;
-        height: 150px;
-    }
-    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    p { font-size: 1rem; }
+    .btn { padding: 12px 25px; font-size: 1rem; }
+    .photo-frame { width: 150px; height: 150px; }
+}
+
+/* --- LOADING SCREEN --- */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ini kunci agar layarnya penuh */
+    background: linear-gradient(135deg, var(--pink1), var(--pink4));
+    z-index: 999999; /* Z-index tertinggi */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-out; 
+}
+
+.loading-heart {
+    font-size: 80px;
+    animation: heartbeat 1s infinite;
+    filter: drop-shadow(0 0 20px rgba(255,255,255,0.6));
+}
+
+.loading-text {
+    font-family: 'Chewy', cursive;
+    font-size: 1.8rem;
+    color: white;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    animation: pulseText 1.5s infinite;
+}
+
+/* Desain lintasan / wadah progress bar */
+.loading-bar-container {
+    width: 80%;
+    max-width: 250px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    margin-top: 25px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Desain isi progress bar yang akan bergerak */
+.loading-bar-fill {
+    height: 100%;
+    width: 0%; /* Dimulai dari 0% */
+    background: linear-gradient(90deg, #FFCFD8, #FF1695); /* Gradien pink */
+    border-radius: 10px;
+}
+
+@keyframes pulseText {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+/* --- ANIMASI FOTO BERDETAK & HATI KECIL STEP 4 --- */
+.heartbeat-active {
+    animation: pulsePhoto 1.5s infinite ease-in-out;
+}
+
+@keyframes pulsePhoto {
+    0% { transform: scale(1); box-shadow: 0 15px 35px rgba(218, 79, 142, 0.25); }
+    50% { transform: scale(1.08); box-shadow: 0 25px 50px rgba(255, 22, 149, 0.6); }
+    100% { transform: scale(1); box-shadow: 0 15px 35px rgba(218, 79, 142, 0.25); }
+}
+
+.mini-heart {
+    position: absolute;
+    font-size: 16px; /* Ukuran sekecil emoticon */
+    animation: float-mini 4s ease-in infinite;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+@keyframes float-mini {
+    0% { transform: translateY(20px) scale(0.5); opacity: 0; }
+    20% { opacity: 0.9; transform: translateY(0) scale(1.2); }
+    80% { opacity: 0.9; }
+    100% { transform: translateY(-150px) scale(0.8); opacity: 0; }
+}
+
+/* --- SCROLL KHUSUS UNTUK PESAN PANJANG DI STEP 6 --- */
+#step6 {
+    min-height: auto !important; /* Menghapus batasan tinggi bawaan */
+    max-height: 70vh; /* Kotak maksimal hanya memakan 70% tinggi layar HP */
+    overflow-y: auto; /* Mengaktifkan fitur scroll atas-bawah */
+    justify-content: flex-start !important; /* Teks dibaca dari atas ke bawah */
+    padding: 10px 15px; /* Memberi ruang agar teks tidak nabrak pinggiran */
+    border-radius: 15px;
+}
+
+/* --- Desain Scrollbar Imut (Khusus Step 6) --- */
+#step6::-webkit-scrollbar {
+    width: 6px; /* Ukuran scrollbar yang ramping */
+}
+#step6::-webkit-scrollbar-track {
+    background: rgba(255, 207, 216, 0.4); /* Warna rel scrollbar pink pudar */
+    border-radius: 10px;
+}
+#step6::-webkit-scrollbar-thumb {
+    background: var(--pink4); /* Warna pegangan scrollbar pink terang */
+    border-radius: 10px;
 }
